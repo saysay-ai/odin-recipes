@@ -5,9 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime World Japanese Recipes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
+<script>
+    $(document).ready(function() {
+
+        $(".image").hover(function() {
+            $(this).stop().animate({
+                width: "250px",
+                height: "250px"
+            }, 500);
+        }, function() {
+            $(this).stop().animate({
+                width: "100px",
+                height: "100px"
+            }, 500);
+        });
+
+        $(".image").click(function() {
+            $(this).stop().animate({
+                width: "250px",
+                height: "250px"
+            }, 500);//add html code to div 
+        });
+        
+    });
+//new 
+    $(document).ready(function() {
+    $(".image-link").click(function(event) {
+        event.preventDefault();
+        var link = $(this).attr("href");
+        $("#end-of-page").load(link);
+    });
+});
+</script>
 <body>
     <header>
+        <div><img src="recipes/panda.png" alt="logo" >
+            <div><h2>Salty Recipes</h2></div>
+         <div><h2>Sweet Recipes</h2></div>
+        </div>
+        
         <h1>Anime World Japanese Recipes</h1>
         <img src="recipes/japanese food1" alt="food" >
         
@@ -49,31 +88,32 @@
         </section>
         <section id="sweet">
             <h2>Sweet Recipes</h2>
-            <article>
-                <a href="dorayaki.html">
+            <article id="dorayaki" style="display: inline-block; margin-right: 10px;" >
+                <a href="#end-of-page" class="image">
                     <img src="recipes/dorayaki.jpg" alt="Dorayaki">
                     <h3>Dorayaki</h3>
                 </a>
             </article>
-            <article>
-                <a href="melon-pan.html">
+            <article id="pan" style="display: inline-block; margin-right: 10px;">
+                <a href="#end-of-page" class="image">
                     <img src="recipes/melon pan.jpg" alt="Melon Pan">
                     <h3>Melon Pan</h3>
                 </a>
             </article>
-            <article>
-                <a href="nikuman.html">
+            <article id="nikuman" style="display: inline-block; margin-right: 10px;">
+                <a href="#end-of-page" class="image">
                     <img src="recipes/nikuman.jpg" alt="Nikuman">
                     <h3>Nikuman(Baozi)</h3>
                 </a>
             </article>
-            <article>
-                <a href="mitarashi-dango.html">
+            <article id="dango" display: inline-block; margin-right: 10px;>
+                <a href="#end-of-page" class="image">
                     <img src="recipes/dango.jpg" alt="Mitarashi Dango">
                     <h3>Dango</h3>
                 </a>
             </article>
         </section>
+        <div id="end-of-page"></div>
     </main>
     <footer>
         <p>&copy; 2024 Anime World Recipes</p>

@@ -20,6 +20,22 @@ header img {
     height: auto;
     border-radius:10px;
 }
+div {
+    display: inline;
+    padding-top:20px;
+    padding-bottom: 20px;
+    font-size:60px;
+    margin: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+div img {
+    width: 100%;
+    max-width:50px;
+    height: auto;
+    border-radius:10px;
+    text-align: left;
+}
 
 h1 {
     padding-top:20px;
